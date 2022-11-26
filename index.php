@@ -1,3 +1,56 @@
+<?php
+
+$hotels = [
+
+    [
+        'name' => 'Hotel Belvedere',
+        'description' => 'Hotel Belvedere Descrizione',
+        'parking' => true,
+        'vote' => 4,
+        'distance_to_center' => 10.4
+    ],
+    [
+        'name' => 'Hotel Futuro',
+        'description' => 'Hotel Futuro Descrizione',
+        'parking' => true,
+        'vote' => 2,
+        'distance_to_center' => 2
+    ],
+    [
+        'name' => 'Hotel Rivamare',
+        'description' => 'Hotel Rivamare Descrizione',
+        'parking' => false,
+        'vote' => 1,
+        'distance_to_center' => 1
+    ],
+    [
+        'name' => 'Hotel Bellavista',
+        'description' => 'Hotel Bellavista Descrizione',
+        'parking' => false,
+        'vote' => 5,
+        'distance_to_center' => 5.5
+    ],
+    [
+        'name' => 'Hotel Milano',
+        'description' => 'Hotel Milano Descrizione',
+        'parking' => true,
+        'vote' => 2,
+        'distance_to_center' => 50
+    ],
+
+];
+
+for ($i = 0; $i < count($hotels); $i++) {
+    $cur_hotel = $hotels[$i];
+    echo $cur_hotel["name"];
+    echo $cur_hotel["description"];
+    echo $cur_hotel["parking"];
+    echo $cur_hotel["vote"];
+    echo $cur_hotel["distance_to_center"];
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,7 +64,7 @@
 </head>
 
 <body>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem commodi vitae omnis aliquid quidem cum sed voluptatum explicabo libero quos nobis suscipit aperiam est sapiente expedita perspiciatis, reprehenderit debitis doloremque.</p>
+
 </body>
 
 </html>
