@@ -40,14 +40,6 @@ $hotels = [
 
 ];
 
-for ($i = 0; $i < count($hotels); $i++) {
-    $cur_hotel = $hotels[$i];
-    echo $cur_hotel["name"];
-    echo $cur_hotel["description"];
-    echo $cur_hotel["parking"];
-    echo $cur_hotel["vote"];
-    echo $cur_hotel["distance_to_center"];
-}
 
 ?>
 
@@ -75,14 +67,44 @@ for ($i = 0; $i < count($hotels); $i++) {
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <th scope="row"></th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-                <td></td>
-            </tr>
+            <?php
+            for ($i = 0; $i < count($hotels); $i++) {
+                $cur_hotel = $hotels[$i];
 
+                // echo $cur_hotel["description"];
+                // echo $cur_hotel["parking"];
+                // echo $cur_hotel["vote"];
+                // echo $cur_hotel["distance_to_center"];
+
+            ?>
+                <tr>
+                    <th scope="row">
+                        <?php
+                        echo $cur_hotel["name"];
+                        ?>
+                    </th>
+                    <td>
+                        <?php
+                        echo $cur_hotel["description"];
+                        ?>
+                    </td>
+                    <td>
+                        <?php
+                        echo $cur_hotel["parking"];
+                        ?>
+                    </td>
+                    <td>
+                        <?php
+                        echo $cur_hotel["vote"];
+                        ?>
+                    </td>
+                    <td>
+                        <?php
+                        echo $cur_hotel["distance_to_center"];
+                        ?>
+                    </td>
+                </tr>
+            <?php } ?>
         </tbody>
     </table>
 </body>
