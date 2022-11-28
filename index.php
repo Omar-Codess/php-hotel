@@ -89,8 +89,13 @@ $hotels = [
                         ?>
                     </td>
                     <td>
+                        <!-- if ($hotels[$i]["parking"] == true) {
+                        $hotels[$i]["parking"] = "Disponibile";
+                        } else {
+                        $hotels[$i]["parking"] = "Non disponibile";
+                        } -->
                         <?php
-                        echo $cur_hotel["parking"];
+                        echo $cur_hotel["parking"] ? "Sì" : "No";
                         ?>
                     </td>
                     <td>
